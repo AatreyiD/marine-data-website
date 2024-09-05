@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Species Sightings</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Species Sightings</h1>
+    <table>
+        <tr>
+            <th>Species</th>
+            <th>Sightings</th>
+        </tr>
+        {% for item in data %}
+            <t>
+                <td>{{ item.species }}</td>
+                <td>{{ item.sightings }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
